@@ -1,6 +1,100 @@
 #s1{
-    background-color: lightgray;
+    background-color: lightgreen;
     height: 100vh;
     width: 50 vw;
-    border: 5px solid black;
+}
+
+#s2 h2:first-child{
+    background-color: hotpink;
+}
+
+#s2 h2:nth-child(2){
+    background-color: #476EAE;
+}
+
+#s2 h2:nth-child(3){
+    background-color: rgb(200, 100, 200);
+}
+
+#s2 h2:nth-child(4){
+    background-color: hsl(30, 70%, 50%);
+}
+
+#s3 p{
+    width: 200px;
+    height: 50px;
+    background-color: lightblue;
+    overflow: hidden;
+}
+
+#s4 p{
+    width: 200px;
+    height: 50px;
+    background-color: lightblue;
+    overflow: auto;
+}
+
+#s5 p{
+    width: 200px;
+    height: 50px;
+    background-color: lightblue;
+    overflow: scroll;
+}
+
+#s6 img{
+    width: 500px;
+    float: right;
+    margin-left: 30px;
+
+}
+
+#s7 {
+    background-color: rgb(166, 255, 0);
+}
+
+#s7 div{
+    float: left;
+    width: 24%;
+}
+
+.clearfix::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.dorado {
+    background-color: gold;
+}
+
+.verde {
+    background-color: limegreen;
+}
+
+.azul {
+    background-color: deepskyblue;
+}
+
+.amarillo {
+    background-color: yellow;
+}
+
+.cafe{
+    background-color: sienna;
+}
+
+.tomate{
+    background-color: tomato;
+}
+
+#s8 {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+
+
+    
 }
