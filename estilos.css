@@ -1,0 +1,229 @@
+/* selector universal */
+#s1 * {
+    color: blue;
+}
+
+/* selector de tipo */
+#s1 footer {
+    border: 5px inset gray;
+}
+
+/* selector de clase */
+.info {
+    border-bottom: 3px double blue;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+/* selector de ID */
+#s1 header {
+    border: 3px solid red;
+    background-color: lightgray;
+}
+
+/*tag.clase*/
+aside.info {
+    background-color: lightblue;
+    font-size: 20px;
+}
+
+/*.=clase*/
+/* Selector por atributo sin importar valor */
+#s2 [lang]{
+    box-shadow: 5px 5px 5px red;
+}
+
+/* Selector por atributo*/
+#s2 [lang="es"]{
+    background-color: red;
+    color: white;
+    border: 5px dotted green;
+}
+#s2 [lang="en"]{
+    box-shadow: 5px 5px 5px rgb(4, 201, 255);
+}
+
+#s2 [href ^= "#"]{
+    color: orange;
+}
+
+#s2 [href $= "mx"]{
+    color: brown;
+}
+
+#s2 [href *= "e"]{
+    font-size: 5px;
+}
+
+/*
+[atributo] selector por atributo sin importar valor
+[atributo="valor"] selector con atributo ihgual a valor
+[atributo^="valor"] selector con atributo que inicia con valor
+[atributo$="valor"] selector con atributo que termina con valor
+[atributo*="valor"] selector con atributo que contiene valor
+*/
+
+/*h1, #d, p.examen [title *="x"]*/
+
+
+/*Selector de descendientes*/
+#s2 footer h2 {
+    border-left: 10px solid purple;
+}
+
+/*Selector de hijo directo*/
+#s3 > h2 {
+    border-radius: 8px;
+    border: 1px solid pink;
+    box-shadow: 5px 10px 3px pink;
+}
+
+/*Selector de hermano adyacente*/
+#s3 h2 + header {
+    border: 6px dashed orange;
+}
+
+/*Selector de hermano adyacente*/
+#s3 h2  header {
+    border: 6px dashed orange;
+}
+
+/*selector de hermano directo ~ */
+#s3 h2 ~ aside {
+    border: 6px dashed violet;
+}
+
+#s4 h2:hover{
+    border: 3px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgreen;
+}
+
+/* Pseudo clase */
+#s4 ul li:first-child {
+    color: red;
+}    
+
+#s4 ul li:last-child {
+    color: rgb(0, 136, 255);
+}
+
+#s4 ul li:nth-child(3) {
+    color: rgb(94, 255, 0);
+}
+
+#s4 ul li:nth-child(even) {
+    color: rgb(242, 0, 255);
+}
+
+#s5 p::first-letter{
+    font-family: Papyrus, fantasy;
+    font-size: 100px;
+}
+
+#s5 p::first-line{
+    background-color: yellow;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+/* PSEUDO ELEMENTOS Y PSEUDO CLASES
+:pseudoclase Clase del sistema
+::pseudotag tag del sistema
+*/
+
+/*ESPECIFICIDAD CSS
+Etiqueta < Clase < ID < Estilo en linea
+!important
+*/
+
+#s5 .error {
+    color: red;
+}
+
+#s5 p {
+    color: rgb(32, 150, 150) !important;
+}
+
+/*Modelo de caja, BOX-SIZING*/
+#s6 p:first-child {
+    border-top: 3px dashed black;
+    border-right: 5px dotted blue;
+    border-bottom: 10px inset gray;
+    border-left: 20px double green;
+}
+
+#s6 p:nth-child(2) {
+    border: 5px dashed red;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+#s6 p:nth-child(3) {
+    border: 5px solid black;
+    /*relleno 10 todos los lados*/
+    padding: 10px;
+    margin: 10px;
+    /*relleno vertical 10px, horizontal 50px*/
+    padding: 10px 50px;
+    margin: 10px 50px;
+    /*relleno superior 10px, horizontal 50px, inferior 40px*/
+    padding: 10px 50px 40px;
+    margin: 10px 50px 40px;
+    /*relleno superior 10px, derecho 50px, inferior 40px, izquierdo 80px*/
+    padding: 10px 20 30px 40px;
+    margin: 10px 20 30px 40px;
+}
+
+
+#s7 div:first-child{
+    width: 100px;
+    height: 100px;
+    background-color: antiquewhite;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid black;
+}
+
+#s7 div:nth-child(2){
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+#s7 a:first-child{
+    display: block; /*Las otras formas, inline es en la misma, block en un bloque nuevo*/
+    display: inline;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: burlywood;
+    border: 1px solid black;
+}
+
+
+/*Medidas Relativas em, rem, vw, vh, %
+em: relativo al padre
+rem: relativo al root (html)*/
+
+#s8 h1{
+    font-size: 20px;
+    border: 0.5em solid blue;
+    padding: 2em;
+    margin: 1em, 2em;
+    width: 20rem;
+    box-sizing: border-box;
+}
+
+
+/*todos los span 10 * 10*/
+span{
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: red;
+}
